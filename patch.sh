@@ -97,6 +97,11 @@ chmod 755 ./usr/sbin/mount_usb
 cat ../../RESOURCES/OpenCentauri/mount_usb_daemon > ./usr/sbin/mount_usb_daemon
 chmod 755 ./usr/sbin/mount_usb_daemon
 
+if [ $INCLUDE_CUSTOM_SPLASH = 1 ]; then
+cp ../../RESOURCES/OpenCentauri/boot-resource ../boot-resource
+echo "Custom Boot-resource copied in!"
+fi
+
 # TODO: Fix swupdate_cmd.sh -i /mnt/exUDISK/update/update.swu -e stable,now_A_next_B -k /etc/swupdate_public.pem
 # Write log to /mnt/exUDISK/ instead of /mnt/UDISK
 
